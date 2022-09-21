@@ -1,0 +1,136 @@
+.ngen-diff {
+    &__header {
+        margin-bottom: 40px;
+    }
+
+    &__title {}
+
+    &__subtitle {
+        margin-bottom: 25px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 56px;
+            height: 1px;
+            background-color: $text;
+            margin-top: 10px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 40px 0 42px;
+        min-height: 380px;
+
+        &-row {
+            display: flex;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -10vw;
+        width: calc(100% + 10vw);
+        padding-top: 25px;
+        padding-bottom: 30px;
+        margin-bottom: 0 !important;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - 100px);
+            height: 25px;
+            background: linear-gradient(to right, $theme-dark, $theme-darker 70%, transparent 100%);
+        }
+
+        &-wrap {
+            position: relative;
+            flex: 0 0 40%;
+            height: 433px;
+        }
+
+        .slick {
+            &-slide {}
+
+            &-dots {
+                position: absolute;
+                right: 0;
+                left: auto;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                li {
+                    width: auto;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+
+                    button {
+                        width: 22px;
+                        height: 1px;
+                        padding: 0;
+                        background-color: $theme-dark;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &.slick-active {
+                        button {
+                            height: 2px;
+                            background-color: $text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex: auto;
+        padding-left: 40px;
+    }
+
+    &__media {
+        position: relative;
+        height: 378px;
+
+        img {
+            display: block;
+            @include imgfit;
+        }
+    }
+
+    &__item:nth-child(even) {
+        background-color: $theme-light;
+
+        .ngen-diff {
+            &__slider {
+                margin-left: 0;
+                margin-right: -10vw;
+
+                &-wrap {
+                    order: 2;
+                }
+            }
+
+            &__content {
+                padding-left: 0;
+                padding-right: 40px;
+            }
+        }
+    }
+}

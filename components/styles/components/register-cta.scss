@@ -1,0 +1,27 @@
+.reg-cta {
+    color: #fff;
+    background-color: $text;
+    padding: 42px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__content {
+        padding: 0 45px 0 50px;
+
+        p {
+            font-size: 14px;
+            line-height: 21px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

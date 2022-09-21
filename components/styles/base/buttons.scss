@@ -1,0 +1,17 @@
+.btn {
+    color: $text;
+    background-color: $theme-text;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+        background-color: $theme-dark;
+    }
+}

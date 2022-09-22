@@ -12,6 +12,10 @@
     &__row {
         display: flex;
         margin: 0 -15px;
+
+        @media (max-width: 991px) {
+            margin: 0 -12px;
+        }
     }
 
     &__col {
@@ -19,6 +23,8 @@
         padding: 0 15px;
 
         @media (max-width: 991px) {
+            padding: 0 12px;
+
             &:nth-child(n+5) {
                 display: none;
             }
@@ -44,6 +50,10 @@
             height: 150px;
             margin-bottom: 26px;
 
+            @media (max-width: 567px) {
+                height: 118px;
+            }
+
             img {
                 display: block;
                 @include imgfit;
@@ -55,6 +65,10 @@
             font-weight: 800;
             margin-bottom: 20px;
             text-transform: uppercase;
+
+            @media (max-width: 567px) {
+                font-size: 14px;
+            }
         }
 
         &-list {
@@ -65,8 +79,16 @@
             li {
                 font-size: 14px;
 
+                @media (max-width: 567px) {
+                    font-size: 12px;
+                }
+
                 &:not(:last-child) {
                     margin-bottom: 15px;
+
+                    @media (max-width: 567px) {
+                        margin-bottom: 5px;
+                    }
                 }
             }
         }

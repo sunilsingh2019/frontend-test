@@ -24,7 +24,13 @@ function homebannerSlider() {
         slidesToScroll: 1,
         draggable: false,
         arrows: false,
-        dots: true
+        dots: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                dots: false
+            }
+        }]
     });
 }
 
@@ -34,7 +40,13 @@ function ngenSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        dots: true
+        dots: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                dots: false
+            }
+        }]
     });
 }
 

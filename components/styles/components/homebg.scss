@@ -1,0 +1,13 @@
+.homebg {
+    padding: 0;
+
+    &__media {
+        @media (max-width: 991px) {
+            height: 326px;
+        }
+
+        img {
+            @include imgfit;
+        }
+    }
+}

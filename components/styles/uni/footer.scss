@@ -3,7 +3,12 @@
     background-color: $text;
 
     &__top {
-        padding: 76px 0 40px;
+        padding-top: 92px;
+        padding: 92px 0 40px;
+
+        @media (max-width: 991px) {
+            padding: 40px 0 20px;
+        }
 
         &-title {
             margin-bottom: 22px;
@@ -51,7 +56,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 120px 0 42px;
+        padding-bottom: 42px;
 
         a {
             display: block;
@@ -90,12 +95,13 @@
 
     &__bot {
         text-align: center;
-        padding: 50px 0 35px;
+        padding: 25px 0 35px;
 
         p {
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: $font-gotham;
             font-size: 14px;
             font-weight: 300;
             margin-bottom: 0;

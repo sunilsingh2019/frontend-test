@@ -1,0 +1,71 @@
+.memb-sm {
+    &__title {
+        color: $text !important;
+    }
+
+    .accordion {
+        &__item {
+            margin-bottom: 40px;
+
+            &-title {
+                font-size: 22px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 18px;
+
+                .icon {
+                    display: block;
+                    width: 45px;
+                    margin-bottom: 15px;
+                    @include margin-auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-body {
+                padding-top: 25px;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                margin: 0 0 10px;
+
+                li {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .btn {
+                margin-top: 20px;
+            }
+
+            &-cont {
+                text-align: center;
+                padding: 30px 23px;
+                color: #fff;
+                background-color: $theme-dark;
+
+
+                p {
+                    font-size: 15px;
+                }
+
+                .hero-img {
+                    width: 174px;
+                    margin-top: 50px;
+                    @include margin-auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,21 +3,41 @@
     background-color: $text;
     padding: 42px 0;
 
+    @media (max-width: 991px) {
+        padding: 50px 0;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
+
+        @media (max-width: 991px) {
+            flex-flow: column;
+        }
     }
 
     &__title {
         margin-bottom: 0;
+
+        @media (max-width: 991px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__content {
         padding: 0 45px 0 50px;
 
+        @media (max-width: 991px) {
+            padding: 0 5px 25px;
+        }
+
         p {
             font-size: 14px;
             line-height: 21px;
+
+            @media (max-width: 991px) {
+                text-align: center;
+            }
 
             &:last-child {
                 margin-bottom: 0;

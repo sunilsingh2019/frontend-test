@@ -2,6 +2,10 @@
     padding: 35px 0 90px;
     background-color: $blue-bg;
 
+    @media (max-width: 991px) {
+        padding: 25px 0 40px;
+    }
+
     &__header {
         margin-bottom: 40px;
     }
@@ -20,6 +24,10 @@
     &__col {
         padding-left: 21px;
         padding-right: 21px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__card {
@@ -38,6 +46,10 @@
         &-media {
             height: 200px;
             margin-bottom: 28px;
+
+            @media (max-width: 991px) {
+                margin-bottom: 16px;
+            }
 
             img {
                 display: block;

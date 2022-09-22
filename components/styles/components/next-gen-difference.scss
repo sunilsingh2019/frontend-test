@@ -2,15 +2,30 @@
     position: relative;
     padding: 35px 0;
 
+    @media (max-width: 991px) {
+        padding: 40px 0;
+    }
+
     &__header {
         margin-top: 45px;
         margin-bottom: 40px;
+
+        @media (max-width: 991px) {
+            margin: 25px 0 30px;
+        }
     }
 
     &__title {}
 
     &__subtitle {
         margin-bottom: 25px;
+
+        @media (max-width: 991px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
 
         &::after {
             content: "";
@@ -26,31 +41,69 @@
         padding: 40px 0 42px;
         min-height: 380px;
 
+        @media (max-width: 991px) {
+            padding: 0;
+        }
+
+        .container {
+            @media (max-width: 991px) {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+
         &-row {
             display: flex;
+
+            @media (max-width: 991px) {
+                position: relative;
+                padding-top: 58px;
+                flex-flow: column;
+            }
         }
     }
 
     &__slider {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        width: calc(50vw - 120px);
-        padding-top: 24px;
-        padding-bottom: 30px;
-        margin-bottom: 0 !important;
-        @include themeBorder;
+
+        @media (min-width: 992px) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: calc(50vw - 120px);
+            padding-top: 24px;
+            padding-bottom: 30px;
+            margin-bottom: 0 !important;
+            @include themeBorder;
+        }
+
+        @media (max-width: 991px) {
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         &-wrap {
-            position: relative;
-            flex: 0 0 calc(50% - 120px);
-            height: 433px;
+            @media (min-width: 992px) {
+                position: relative;
+                flex: 0 0 calc(50% - 120px);
+                min-height: 433px;
+            }
+
+            @media (min-width: 1441px) {
+                height: 475px;
+            }
+
+            @media (min-width: 1921px) {
+                height: 535px;
+            }
+
+            @media (max-width: 991px) {
+                position: relative;
+            }
         }
 
         .slick {
-            &-slide {}
-
             &-dots {
                 position: absolute;
                 right: 0;
@@ -95,12 +148,31 @@
 
     &__content {
         flex: auto;
-        padding-left: 40px;
+
+        @media (min-width: 992px) {
+            padding-left: 40px;
+        }
     }
 
     &__media {
         position: relative;
         height: 378px;
+
+        @media (min-width: 1441px) {
+            height: 420px;
+        }
+
+        @media (min-width: 1921px) {
+            height: 480px;
+        }
+
+        @media (max-width: 991px) {
+            height: 360px;
+        }
+
+        @media (max-width: 567px) {
+            height: 192px;
+        }
 
         img {
             display: block;
@@ -108,22 +180,33 @@
         }
     }
 
-    &--alt {
+    &__text {
+        @media (max-width: 991px) {
+            padding-top: 26px;
+        }
+    }
 
-        .ngen-diff {
-            &__slider {
-                right: auto;
-                left: 0;
-                @include themeBorderAlt;
+    @media (min-width: 992px) {
+        &--alt {
+            .ngen-diff {
+                &__slider {
+                    right: auto;
+                    left: 0;
+                    @include themeBorderAlt;
 
-                &-wrap {
-                    order: 2;
+                    &-wrap {
+                        order: 2;
+                    }
+
+                    .slick-dots {
+                        justify-content: flex-start;
+                    }
                 }
-            }
 
-            &__content {
-                padding-left: 0;
-                padding-right: 40px;
+                &__content {
+                    padding-left: 0;
+                    padding-right: 40px;
+                }
             }
         }
     }

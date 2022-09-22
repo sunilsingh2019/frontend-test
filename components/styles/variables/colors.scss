@@ -11,11 +11,18 @@ $theme-text: #BB9369;
 $blue-bg: #D5DADD;
 
 $yellow: #F2C689;
+$yellow-text: #ECDFD3;
 
 .bg {
 
     &-cream,
     &-light {
         background-color: $theme-light !important;
+    }
+}
+
+.color {
+    &-text {
+        color: $text;
     }
 }

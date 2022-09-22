@@ -2,8 +2,17 @@
     padding: 16px 0 52px;
     background-color: $theme;
 
+    @media (max-width: 991px) {
+        padding: 0 0 40px;
+
+        .container {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+
     &__slider {
-        max-width: 1920;
+        max-width: 1920px;
         @include margin-auto;
         margin-bottom: 0 !important;
 
@@ -14,13 +23,26 @@
 
             &-dots {
                 position: relative;
-                left: 23.6%;
+                left: calc(50% - 380px);
                 right: auto;
                 bottom: auto;
-                width: calc(100% - 23.6%);
+                width: calc(50% + 380px);
                 display: flex;
                 justify-content: flex-start;
                 margin-top: 24px;
+
+                @media (max-width: 991px) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    justify-content: center;
+                    display: none;
+                }
+
+                @media (max-width: 1200px) and (min-width: 992px) {
+                    left: calc(50% - 300px);
+                    width: calc(50% + 300px);
+                }
 
                 li {
                     width: auto;
@@ -51,12 +73,14 @@
 
     &__card {
         position: relative;
-        max-width: 1920px;
-        @include margin-auto;
 
         &-row {
             display: flex;
             min-height: 580px;
+
+            @media (max-width: 991px) {
+                flex-flow: column;
+            }
         }
 
         &-content,
@@ -69,6 +93,13 @@
             background-color: $theme;
             padding-top: 90px;
             padding-bottom: 30px;
+
+            @media (max-width: 991px) {
+                padding: 26px 24px;
+                width: 272px;
+                @include margin-auto;
+                margin-top: -50px;
+            }
 
             p {
                 font-size: 14px;
@@ -88,15 +119,33 @@
 
         &-text {
             padding-right: 38px;
-        }
 
+            @media (max-width: 991px) {
+                padding-right: 0;
+            }
+        }
 
         &-media {
             position: absolute;
             top: 0;
             right: 0;
-            width: calc(50vw + 380px);
+            width: calc(50% + 380px);
             height: 100%;
+
+            @media (max-width: 1200px) and (min-width: 992px) {
+                width: calc(50% + 300px);
+            }
+
+            @media (max-width: 991px) {
+                position: static;
+                width: 100%;
+                height: 265px;
+                padding-top: 0 !important;
+
+                &::before {
+                    display: none !important;
+                }
+            }
 
             img {
                 display: block;
@@ -115,6 +164,13 @@
             padding-left: 0;
             background-color: $theme;
             margin-bottom: 10px;
+
+            @media (max-width: 991px) {
+                line-height: 28px;
+                width: auto;
+                padding: 0;
+                margin-bottom: 20px;
+            }
         }
     }
 }

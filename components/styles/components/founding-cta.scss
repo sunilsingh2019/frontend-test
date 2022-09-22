@@ -3,6 +3,10 @@
     color: #fff;
     background-color: $text;
 
+    @media (max-width: 991px) {
+        padding: 50px 0;
+    }
+
     &__row {
         margin: 0 -28px;
         align-items: flex-end;
@@ -22,6 +26,10 @@
             height: 1px;
             background-color: $theme-text;
             margin: 50px 0 25px;
+
+            @media (max-width: 991px) {
+                margin: 15px 0 25px;
+            }
         }
     }
 
@@ -30,15 +38,17 @@
     }
 
     &__form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 0 40px;
-        grid-template-areas:
-            "formfield--1 formfield--3"
-            "formfield--2 formfield--4"
-            "formfield--5 formfield--6";
-        margin-bottom: -24px;
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0 40px;
+            grid-template-areas:
+                "formfield--1 formfield--3"
+                "formfield--2 formfield--4"
+                "formfield--5 formfield--6";
+            margin-bottom: -24px;
+        }
 
         .formfield {
             &:nth-child(1) {

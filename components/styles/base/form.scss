@@ -1,0 +1,64 @@
+.formfield {
+    margin-bottom: 24px;
+
+    label {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    input:not([type="submit"]) {
+        width: 100%;
+        height: 32px;
+        background-color: rgba(#fff, .2);
+        border: 0;
+    }
+}
+
+.checkbox {
+    input {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        padding-left: 36px;
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        line-height: 21px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(#fff, .2);
+        }
+
+        &::after {
+            top: 3.5px;
+            left: 3.5px;
+            width: 18px;
+            height: 18px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS40MTQiIGhlaWdodD0iMTkuNDE0IiB2aWV3Qm94PSIwIDAgMTkuNDE0IDE5LjQxNCI+DQogIDxnIGlkPSJHcm91cF80IiBkYXRhLW5hbWU9Ikdyb3VwIDQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01NDIuNzkzIC0zNzMuNzkzKSI+DQogICAgPHBhdGggaWQ9IkxpbmVfMiIgZGF0YS1uYW1lPSJMaW5lIDIiIGQ9Ik0xOC41LDE4LjUuNS41IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NDMgMzc0KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMSIvPg0KICAgIDxwYXRoIGlkPSJMaW5lXzJfQ29weSIgZGF0YS1uYW1lPSJMaW5lIDIgQ29weSIgZD0iTTAsMTgsMTgsMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTQzLjUgMzc0LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwvZz4NCjwvc3ZnPg0K");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all .3s ease-out;
+        }
+    }
+
+    input:checked+label::after {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,209 @@
+.memb {
+    position: relative;
+    background-color: $theme;
+    padding: 23px 0 0;
+    text-align: center;
+    overflow: hidden;
+    @include themeBorder;
+    @include themeBorderAlt;
+
+    &::before {
+        z-index: 2;
+        width: 719px;
+    }
+
+    &__table {
+        flex: auto;
+        padding: 90px 0 115px;
+
+        &-wrap {
+            display: flex;
+        }
+    }
+
+    &__header {
+        padding-bottom: 25px;
+        border-bottom: 1px solid $text;
+
+        .memb__row {
+            align-items: flex-end;
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 70px;
+
+        &-item {
+            padding: 10px 0;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:not(:nth-last-child(-n+2)) {
+                border-bottom: 1px solid #fff;
+            }
+
+            &--footer {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                padding: 0;
+
+                >.memb__row {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        >.memb__row {}
+    }
+
+    &__row {
+        margin: 0 -20px;
+    }
+
+    [class*="__col--"] {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__col {
+        &--title {
+            text-align: left;
+        }
+    }
+
+    &__cat {
+        &-icon {
+            width: auto;
+            max-width: 100%;
+            height: 45px;
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            font-size: 22px;
+            margin-bottom: 0;
+        }
+
+        &-row {
+            margin: 0;
+        }
+
+        &-col {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            &--premium {
+                .memb__opt {
+                    &-no {
+                        background-color: #fff;
+                        border-color: #fff;
+                    }
+
+                    &-yes {
+                        background-color: $theme-dark;
+                        border-color: $theme-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    &__opt {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: $theme-accent;
+        border: 2px solid $theme-accent;
+        border-radius: 50%;
+        @include margin-auto;
+
+        &-yes {
+            &--v2 {
+                background-color: $theme-accent;
+                border-color: #fff;
+            }
+        }
+
+        &-no {
+            background-color: transparent;
+
+            &--v2 {
+                background-color: #fff;
+                border-color: #fff;
+            }
+        }
+    }
+
+    &__cont {
+        &-heroimg {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #fff;
+
+            img {
+                display: block;
+                width: 174px;
+                @include margin-auto;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+    &__table--club {
+        z-index: 1;
+        position: relative;
+        flex: 0 0 360px;
+        color: #fff;
+
+        &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000%;
+            height: 100%;
+            background-color: $theme-dark;
+            border: 2px solid #fff;
+        }
+
+        .memb {
+            &__header {
+                border-bottom-color: #fff;
+            }
+
+            &__body {
+                padding-left: 42px;
+                padding-right: 42px;
+            }
+
+            &__cat-icon {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

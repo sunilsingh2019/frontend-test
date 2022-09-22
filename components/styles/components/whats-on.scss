@@ -1,0 +1,57 @@
+.whatson {
+    padding: 70px 0;
+    background-color: $blue-bg;
+
+    &__cont {
+        position: relative;
+        padding-top: 35px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            display: block;
+            @include imgfit;
+        }
+    }
+
+    &__text {
+        z-index: 1;
+        position: relative;
+        width: 265px;
+        background-color: $blue-bg;
+        padding: 32px 26px 46px;
+        margin-left: auto;
+        margin-right: 100px;
+    }
+
+    &__title {
+        line-height: 56px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 58px;
+            height: 1px;
+            background-color: $text;
+            margin: 20px 0 25px;
+        }
+    }
+
+    .btn {
+        margin-top: 70px;
+    }
+
+    p {
+        span {
+            font-weight: 500;
+        }
+    }
+}

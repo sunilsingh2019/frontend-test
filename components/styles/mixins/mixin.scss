@@ -37,3 +37,23 @@
     object-fit: cover;
     object-position: center;
 }
+
+@mixin themeBorder {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 100px);
+        height: 25px;
+        background: linear-gradient(to right, $theme-dark, $theme-darker 70%, transparent 100%);
+    }
+}
+
+@mixin themeBorderAlt {
+    &::before {
+        left: auto;
+        right: 0;
+        transform: rotateY(180deg);
+    }
+}

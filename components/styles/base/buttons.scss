@@ -2,6 +2,7 @@
     color: $text;
     background-color: $theme-text;
     padding: 5px 20px;
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,9 +10,25 @@
     text-transform: uppercase;
     white-space: nowrap;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
         color: #fff;
         background-color: $theme-dark;
+    }
+
+    &-light {
+        color: $theme-dark;
+        background-color: $theme-light;
+    }
+
+    &-dark {
+        color: #fff;
+        background-color: $theme-dark;
+    }
+
+    &-black {
+        color: #fff;
+        background-color: $text;
     }
 }

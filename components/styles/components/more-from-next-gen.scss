@@ -1,0 +1,74 @@
+.more-ngen {
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        padding-bottom: 22px;
+        margin-bottom: 26px;
+        border-bottom: 1px solid $text;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -15px;
+    }
+
+    &__col {
+        flex: 1;
+        padding: 0 15px;
+
+        @media (max-width: 991px) {
+            &:nth-child(n+5) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 567px) {
+            &:nth-child(n+3) {
+                display: none;
+            }
+        }
+    }
+
+    &__card {
+        text-align: center;
+
+        &-media {
+            height: 150px;
+            margin-bottom: 26px;
+
+            img {
+                display: block;
+                @include imgfit;
+            }
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        &-list {
+            padding-left: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

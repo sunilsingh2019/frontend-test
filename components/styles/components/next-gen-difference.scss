@@ -1,7 +1,12 @@
 .ngen-diff {
-    &__header {
-        margin-bottom: 40px;
+    position: relative;
+    padding: 35px 0;
+
+    &--header {
+        padding: 80px 0 0;
     }
+
+    &__header {}
 
     &__title {}
 
@@ -19,7 +24,6 @@
     }
 
     &__item {
-        position: relative;
         padding: 40px 0 42px;
         min-height: 380px;
 
@@ -30,11 +34,11 @@
 
     &__slider {
         position: absolute;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: 0;
-        margin-left: -10vw;
-        width: calc(100% + 10vw);
-        padding-top: 25px;
+        width: calc(50vw - 120px);
+        padding-top: 24px;
         padding-bottom: 30px;
         margin-bottom: 0 !important;
 
@@ -49,8 +53,7 @@
         }
 
         &-wrap {
-            position: relative;
-            flex: 0 0 40%;
+            flex: 0 0 calc(50% - 120px);
             height: 433px;
         }
 
@@ -114,13 +117,19 @@
         }
     }
 
-    &__item:nth-child(even) {
+    &--alt {
         background-color: $theme-light;
 
         .ngen-diff {
             &__slider {
-                margin-left: 0;
-                margin-right: -10vw;
+                left: auto;
+                right: 0;
+
+                &::before {
+                    left: auto;
+                    right: 0;
+                    transform: rotateY(180deg);
+                }
 
                 &-wrap {
                     order: 2;

@@ -1,5 +1,5 @@
 .btn {
-    color: $text;
+    color: #fff;
     background-color: $theme-text;
     padding: 5px 20px;
     border: 0;
@@ -11,6 +11,7 @@
     white-space: nowrap;
     text-decoration: none;
     cursor: pointer;
+    transition: all .3s ease-out;
 
     &:hover {
         color: #fff;
@@ -31,6 +32,11 @@
     &-light {
         color: $theme-dark;
         background-color: $theme-light;
+
+        &:hover {
+            color: $text;
+            background-color: $theme;
+        }
     }
 
     &-dark {
@@ -39,7 +45,7 @@
 
         &:hover {
             color: $text;
-            background-color: $theme;
+            background-color: $theme-darker;
         }
     }
 

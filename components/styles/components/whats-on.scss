@@ -72,6 +72,10 @@
     .btn {
         margin-top: 70px;
 
+        @media (min-width: 992px) {
+            width: 100%;
+        }
+
         @media (max-width: 991px) {
             margin-top: 20px;
         }

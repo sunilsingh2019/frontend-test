@@ -1,6 +1,7 @@
 .ngen-diff {
     position: relative;
     padding: 35px 0;
+    overflow: hidden;
 
     @media (max-width: 991px) {
         padding: 40px 0;
@@ -158,12 +159,16 @@
         position: relative;
         height: 378px;
 
-        @media (min-width: 1441px) {
-            height: 420px;
+        @media (min-width: 1921px) {
+            height: 520px;
         }
 
-        @media (min-width: 1921px) {
+        @media (min-width: 16001px) and (max-width: 1920px) {
             height: 480px;
+        }
+
+        @media (min-width: 1441px) and (max-width: 1600px) {
+            height: 420px;
         }
 
         @media (max-width: 991px) {

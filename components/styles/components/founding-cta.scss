@@ -38,17 +38,17 @@
     }
 
     &__form {
-        @media (min-width: 992px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 0 40px;
-            grid-template-areas:
-                "formfield--1 formfield--3"
-                "formfield--2 formfield--4"
-                "formfield--5 formfield--6";
-            margin-bottom: -24px;
-        }
+        // @media (min-width: 992px) {
+        //     display: grid;
+        //     grid-template-columns: 1fr 1fr;
+        //     grid-template-rows: 1fr 1fr 1fr;
+        //     gap: 0 40px;
+        //     grid-template-areas:
+        //         "formfield--1 formfield--3"
+        //         "formfield--2 formfield--4"
+        //         "formfield--5 formfield--6";
+        //     margin-bottom: -24px;
+        // }
 
         .formfield {
             &:nth-child(1) {

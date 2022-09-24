@@ -51,7 +51,8 @@
                 margin-bottom: 16px;
             }
 
-            img {
+            img,
+            video {
                 display: block;
                 @include imgfit;
             }

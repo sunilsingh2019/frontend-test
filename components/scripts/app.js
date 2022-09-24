@@ -4,6 +4,7 @@ var win = $(window);
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+    headerSticky()
     homebannerSlider()
     ngenSlider()
     accordion()
@@ -15,6 +16,21 @@ win.on('load', function () {});
 
 
 /*****  Declare your functions here  ********/
+function headerSticky() {
+    if ($(window).scrollTop() > 100) {
+        $('.header').addClass('header-sticky')
+    } else {
+        $('.header').removeClass('header-sticky')
+    }
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $('.header').addClass('header-sticky')
+        } else {
+            $('.header').removeClass('header-sticky')
+        }
+    })
+}
 
 function homebannerSlider() {
     $('.homebanner__slider').slick({

@@ -6,9 +6,15 @@
     width: 100%;
     padding: 32px 0;
     background-color: $theme;
+    transition: all .3s ease-out;
 
     @media (max-width: 991px) {
         padding: 22px 0;
+    }
+
+    &.header-sticky {
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(#000, .1);
     }
 
     .container {

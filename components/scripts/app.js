@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     homebannerSlider()
     ngenSlider()
     accordion()
+    checkboxToggle()
 });
 
 //function called on window resize
@@ -108,6 +109,29 @@ function accordion() {
                     activeSiblingHeader.slideDown()
                 }
 
+            }
+        })
+    })
+}
+
+function checkboxToggle() {
+    $('input[type="checkbox"]').each(function () {
+        const $this = $(this),
+            labelObj = $this.siblings('label');
+
+        console.log(labelObj)
+
+        if ($this.is(':checked')) {
+            labelObj.addClass('checked')
+        } else {
+            labelObj.removeClass('checked')
+        }
+
+        labelObj.click(function () {
+            if ($this.is(':checked')) {
+                $(this).removeClass('checked')
+            } else {
+                $(this).addClass('checked')
             }
         })
     })

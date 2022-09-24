@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     headerSticky()
     homebannerSlider()
     ngenSlider()
+    moreNgenSlider()
     accordion()
     checkboxToggle()
 });
@@ -62,6 +63,36 @@ function ngenSlider() {
             breakpoint: 991,
             settings: {
                 dots: false
+            }
+        }]
+    });
+}
+
+function moreNgenSlider() {
+    $('.more-ngen__slider').slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 4,
+                dots: true
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 3,
+                dots: true
+            }
+        }, {
+            breakpoint: 567,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true
             }
         }]
     });

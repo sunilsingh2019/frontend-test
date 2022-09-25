@@ -2,12 +2,20 @@
     padding: 0;
 
     &__media {
-        @media (max-width: 991px) {
-            height: 326px;
-        }
+        position: relative;
+        height: 326px;
+        overflow: hidden;
 
         img {
-            @include imgfit;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+            pointer-events: none;
+            width: 100%;
+            height: calc(100% + 100px);
+            object-fit: cover;
+            object-position: center;
         }
     }
 }

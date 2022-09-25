@@ -15,9 +15,14 @@
     &__table {
         flex: auto;
         padding: 90px 0 115px;
+        padding-right: 40px;
 
         &-wrap {
             display: flex;
+        }
+
+        &--club {
+            padding-right: 0;
         }
     }
 
@@ -33,7 +38,7 @@
     &__body {
         position: relative;
         padding-top: 40px;
-        padding-bottom: 70px;
+        padding-bottom: 88px;
 
         &-item {
             padding: 10px 0;

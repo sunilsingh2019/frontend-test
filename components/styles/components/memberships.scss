@@ -13,22 +13,8 @@
     }
 
     &__table {
-        z-index: 1;
-        position: relative;
         flex: auto;
         padding: 90px 0 115px;
-
-        &::before {
-            content: "";
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 69%;
-            width: 1000%;
-            height: calc(100% - 4px);
-            background-color: $theme-dark;
-            border: 2px solid #fff;
-        }
 
         &-wrap {
             display: flex;
@@ -36,70 +22,28 @@
     }
 
     &__header {
+        padding-bottom: 25px;
+        border-bottom: 1px solid $text;
 
         .memb__row {
             align-items: flex-end;
-            margin: 0;
-        }
-
-        .memb__col--title,
-        [class*="memb__cat-col--"] {
-            border-bottom: 1px solid $text;
-        }
-
-        .memb__cat-col--club {
-            border-bottom-color: transparent;
-
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                top: 100%;
-                height: 1px;
-            }
-
-            &::before {
-                right: 0;
-                width: 100%;
-                background-color: #fff;
-            }
-
-            &::after {
-                right: 100%;
-                width: 40px;
-                background-color: $text;
-            }
-        }
-
-        .memb__col--title {
-            padding-left: 0 !important;
         }
     }
 
     &__body {
         position: relative;
-        padding-top: 30px;
+        padding-top: 40px;
         padding-bottom: 70px;
 
         &-item {
+            padding: 10px 0;
+
+            &:first-child {
+                padding-top: 0;
+            }
 
             &:not(:nth-last-child(-n+2)) {
-
-                .memb__col--title,
-                .memb__cat-row [class^="memb__cat-col--"] {
-                    border-bottom: 1px solid #fff;
-                }
-
-                .memb__cat-row .memb__cat-col--club {
-                    border-bottom-color: transparent;
-
-                    .memb__cont {
-                        position: absolute;
-                        top: 10px;
-                        left: 40px;
-                        width: calc(100% - 40px - 40px);
-                    }
-                }
+                border-bottom: 1px solid #fff;
             }
 
             &--footer {
@@ -119,7 +63,7 @@
     }
 
     &__row {
-        margin: 0;
+        margin: 0 -20px;
     }
 
     [class*="__col--"] {
@@ -130,14 +74,6 @@
     &__col {
         &--title {
             text-align: left;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        &--cat {
-            padding-left: 0 !important;
         }
     }
 
@@ -156,15 +92,11 @@
 
         &-row {
             margin: 0;
-            flex-wrap: nowrap;
-        }
-
-        [class*="-col--"] {
-            padding-top: 10px;
-            padding-bottom: 10px;
         }
 
         &-col {
+            padding-left: 20px;
+            padding-right: 20px;
 
             &--premium {
                 .memb__opt {
@@ -177,27 +109,6 @@
                         background-color: $theme-dark;
                         border-color: $theme-dark;
                     }
-                }
-            }
-
-            &--club {
-                color: #fff;
-                margin-left: 40px;
-                padding-left: 40px;
-                padding-right: 40px;
-
-                .memb__cat {
-                    &-icon {
-                        filter: brightness(0) invert(1);
-                    }
-
-                    &-title {
-                        color: #fff;
-                    }
-                }
-
-                .btn {
-                    width: 100%;
                 }
             }
         }
@@ -275,7 +186,7 @@
             top: 0;
             left: 0;
             width: 1000%;
-            height: 100%;
+            height: calc(100% - 4px);
             background-color: $theme-dark;
             border: 2px solid #fff;
         }

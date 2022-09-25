@@ -147,8 +147,12 @@ function accordion() {
 
 function checkboxToggle() {
     $('input[type="checkbox"]').each(function () {
-        const $this = $(this),
+        var $this = $(this),
             labelObj = $this.siblings('label');
+
+        if (labelObj.length === 0) {
+            labelObj = $this.parent('label');
+        }
 
         console.log(labelObj)
 
@@ -160,9 +164,9 @@ function checkboxToggle() {
 
         labelObj.click(function () {
             if ($this.is(':checked')) {
-                $(this).removeClass('checked')
-            } else {
                 $(this).addClass('checked')
+            } else {
+                $(this).removeClass('checked')
             }
         })
     })

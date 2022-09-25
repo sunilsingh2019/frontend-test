@@ -97,6 +97,7 @@
         text-align: center;
         padding: 25px 0 35px;
 
+        .container>div,
         ul {
             padding-left: 0;
             margin: 0;
@@ -108,7 +109,7 @@
             font-weight: 300;
 
             @media (max-width: 767px) {
-                display: block;
+                flex-flow: column;
                 color: #fff;
 
                 a {
@@ -125,7 +126,8 @@
                 list-style-type: none;
             }
 
-            li {
+            li,
+            span {
                 position: relative;
                 display: block;
 

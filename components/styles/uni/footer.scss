@@ -98,10 +98,8 @@
         padding: 25px 0 35px;
 
         ul {
-            list-style-type: none;
             padding-left: 0;
             margin: 0;
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -120,6 +118,11 @@
                         text-decoration: none;
                     }
                 }
+            }
+
+            &,
+            li {
+                list-style-type: none;
             }
 
             li {

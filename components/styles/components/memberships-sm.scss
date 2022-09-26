@@ -30,6 +30,10 @@
                 padding-top: 25px;
             }
 
+            &-text {
+                padding: 30px 23px;
+            }
+
             ul {
                 list-style-type: none;
                 padding-left: 0;
@@ -47,10 +51,6 @@
 
             &-cont {
                 text-align: center;
-                padding: 30px 23px;
-                color: #fff;
-                background-color: $theme-dark;
-
 
                 p {
                     font-size: 15px;
@@ -63,6 +63,30 @@
 
                     img {
                         width: 100%;
+                    }
+                }
+            }
+
+            &.theme-dark {
+                .accordion__item {
+                    &-text {
+                        color: #fff;
+                        background-color: $theme-dark;
+                    }
+
+                }
+
+                .hero-img img {
+                    filter: brightness(0) invert(1);
+                }
+
+                .btn {
+                    color: $theme-dark;
+                    background-color: #fff;
+
+                    &:hover {
+                        color: $theme-dark;
+                        background-color: $theme;
                     }
                 }
             }

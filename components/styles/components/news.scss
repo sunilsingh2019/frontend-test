@@ -56,6 +56,10 @@
                 display: block;
                 @include imgfit;
             }
+
+            iframe {
+                max-width: 100%;
+            }
         }
 
         p {
